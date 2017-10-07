@@ -1,0 +1,128 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"main/index.html": {
+		"resources": [
+			"common/iconfont.css",
+			"fonts/mui.ttf",
+			"main/main.js",
+			"js/mui.js",
+			"main/main.css",
+			"css/mui.css",
+			"main/MarkInf.js",
+			"main/imgs/fengjing.jpg",
+			"main/index.html",
+			"js/connect.js",
+			"js/jquery-3.2.1.min.js",
+			"js/require.js",
+			"main/imagUpLoad.js",
+			"main/InfoWindow.js",
+			"main/InfoWindow.css",
+			"spatialQuery/spatialQuery.js"
+		],
+		"refer": [
+			"main/index.html",
+			"detailInfPage/detailInfPage.html",
+			"Mine/Mine.html",
+			"zhoubianchaxun/zhoubianchaxun.html"
+		]
+	},
+	"register/register.html": {
+		"resources": [
+			"js/connect.js",
+			"register/register.js",
+			"js/jquery-3.2.1.min.js",
+			"register/register.css",
+			"js/mui.js",
+			"css/mui.css",
+			"js/require.js",
+			"register/test.js",
+			"fonts/mui.ttf",
+			"js/Storage.js"
+		],
+		"refer": [
+			"login/login.html"
+		]
+	},
+	"detailInfPage/detailInfPage.html": {
+		"resources": [
+			"detailInfPage/detailInfPage.css",
+			"fonts/mui.ttf",
+			"detailInfPage/detailInfPage.js",
+			"js/mui.js",
+			"css/mui.css",
+			"js/jquery-3.2.1.min.js",
+			"js/require.js",
+			"js/connect.js",
+			"main/imgs/fengjing.jpg"
+		]
+	},
+	"testhtml.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"login/login.html": {
+		"resources": [
+			"login/login.js",
+			"js/connect.js",
+			"css/mui.min.css",
+			"js/jquery-3.2.1.min.js",
+			"js/mui.js",
+			"js/require.js",
+			"login/login.css",
+			"fonts/mui.ttf",
+			"js/Storage.js"
+		],
+		"refer": [
+			"register/register.html",
+			"main/index.html",
+			"forgetPassword/forgetPassword.html"
+		]
+	},
+	"forgetPassword/forgetPassword.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"forgetPassword/forgetPassword.css",
+			"forgetPassword/forgetPassword.js",
+			"js/connect.js",
+			"js/jquery-3.2.1.min.js",
+			"js/mui.js",
+			"css/mui.css",
+			"js/require.js"
+		]
+	},
+	"Mine/Mine.html": {
+		"resources": [
+			"Mine/Mine.css",
+			"main/imgs/fengjing.jpg",
+			"Mine/Mine.js",
+			"js/connect.js",
+			"fonts/mui.ttf",
+			"js/jquery-3.2.1.min.js",
+			"js/mui.js",
+			"css/mui.css",
+			"js/require.js",
+			"js/Storage.js"
+		]
+	},
+	"zhoubianchaxun/zhoubianchaxun.html": {
+		"resources": [
+			"zhoubianchaxun/zhoubianchaxun.js",
+			"js/connect.js",
+			"zhoubianchaxun/zhoubianchaxun.css",
+			"fonts/mui.ttf",
+			"js/jquery-3.2.1.min.js",
+			"js/mui.js",
+			"css/mui.css",
+			"js/require.js"
+		]
+	}
+}

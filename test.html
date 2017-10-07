@@ -1,0 +1,79 @@
+<!-- 重点参数：infoTitle, infoBody -->
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 原始地址：//webapi.amap.com/ui/1.0/ui/overlay/SimpleInfoWindow/examples/events.html -->
+    <base href="//webapi.amap.com/ui/1.0/ui/overlay/SimpleInfoWindow/examples/" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>监听事件</title>
+    <style>
+    html,
+    body,
+    #container {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    
+    p.my-desc {
+        margin: 5px 0;
+        line-height: 150%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.0&key=您申请的key值'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script type="text/javascript">
+    //创建地图
+    var map = new AMap.Map('container', {
+        zoom: 4
+    });
+
+    AMapUI.loadUI(['overlay/SimpleInfoWindow'], function(SimpleInfoWindow) {
+
+        var infoWindow = new SimpleInfoWindow({
+
+            infoTitle: '<strong>点击这里</strong>',
+
+            infoBody: '<p class="my-desc">点击这里</p><button class="mybtn">点击这里</button>',
+
+            //基点指向marker的头部位置
+            offset: new AMap.Pixel(0, -31)
+        });
+
+        infoWindow.get$Container().on('click', function(event) {
+
+            alert('Click infoWindow');
+        });
+
+        infoWindow.get$InfoTitle().on('click', function(event) {
+
+            //阻止冒泡
+            event.stopPropagation();
+
+            alert('Click infoTitle');
+
+        });
+
+        infoWindow.get$InfoBody().on('click', '.mybtn', function(event) {
+
+            //阻止冒泡
+            event.stopPropagation();
+
+            alert('Click .mybtn of infoBody');
+
+        });
+
+        infoWindow.open(map, map.getCenter());
+
+    });
+    </script>
+</body>
+
+</html>

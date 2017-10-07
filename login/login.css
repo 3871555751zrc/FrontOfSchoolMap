@@ -1,0 +1,41 @@
+.mui-input-group:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    /* background-color: #c8c7cc; */
+}
+
+.mui-input-group:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 0px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+
+body,.mui-content{
+	background-color: white;
+}
+
+#loginBtn{
+	margin-top: 30px;
+}
+.mui-content{
+	padding-left:5%;
+	padding-right: 5%;
+}
+.rememberPassword{
+	z-index: 9999;
+    position: fixed;
+    right: 20px;
+    top: 150px;
+}

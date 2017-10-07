@@ -1,0 +1,101 @@
+html,body,.mui-content
+{
+	height: 100%;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.head-box{
+	border: 1px solid red;
+	height: 20%;
+	width: 100%;
+	background-color: #3b434a;
+}
+.user-box{
+	margin-top: 20px;
+}
+.avatar-box{
+	height:40px;
+	width: 40px;
+	border: 1px solid blue;
+	border-radius:40px;
+	overflow: hidden;
+	float: left;
+}
+.avatar-box img{
+	height:100%;
+	width: auto;
+	
+}
+.userifo-box{
+	margin-left: 10px;
+	float: left;
+	line-height: 0.9em;
+}
+#username{
+	color: #25c5a3;
+}
+#college{
+	color: white;
+	font-size: 11px;
+}
+
+.mui-icon.mui-icon-arrowright
+{
+	float: right;
+	margin-right: 5px;
+}
+
+
+.main-box{
+	background-color:white;
+	height: 12%;
+	margin: 0px;
+	border: 1px solid blue;
+}
+.foot-box ul{
+	margin-top: 30px;
+}
+
+.chengjiu-box{
+	margin-left: 4%;
+	border: 1px solid red;
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.timushu-box{
+	margin-left: 4%;
+	border: 1px solid red;
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.daduishu-box{
+	margin-left: 4%;
+	border: 1px solid red;
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.dakashu-box{
+	margin-left: 4%;
+	border: 1px solid red;
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.main-box p{
+	line-height: 0.9em;
+	text-align: center;
+}
+
+.main-box div{
+	
+	padding-top: 5px;
+}

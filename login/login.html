@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录框</title>
+	 <link rel="stylesheet" href="../css/mui.min.css" />
+	 <link rel="stylesheet" href="login.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title mui-text-center">登录</h1>
+		</header>
+		<div class="mui-content mui-text-center" style="padding-top:74px;">
+		<!--<table>
+			<tr>
+				<td>用户名</td>
+				<td><input type="text" name="" id="username" value="1" /></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td><input type="password" name="" id="password" value="1" /></td>
+			</tr>
+			<tr><td><button id="loginBtn" class="mui-btn mui-btn-primary mui-btn-block">登录</button></td></tr>
+		</table>-->
+		
+		<form class="mui-input-group">
+					<div class="mui-input-row">
+						<label>用户名</label>
+						<input type="text" placeholder="输入用户名" id="username">
+					</div>
+					<div class="mui-input-row">
+						<label>密码</label>
+						<input type="password" class="mui-input-clear" placeholder="输入密码" id="password">
+						<input type="checkbox" name="rememberPassword" value="记住密码"/> 
+					</div>
+					<label class="rememberPassword"><input name="rememberPassword" id="rememberPassword"  type="checkbox" value="" />记住密码 </label>
+               
+	    </form>
+		            <div class="mui-button-row">
+						<button id="loginBtn" class="mui-btn mui-btn-primary mui-btn-block">登录</button>
+					</div>
+					<div id="forgetPassword"><a>忘记密码？</a></div>
+		              
+		            </div>
+		            <button id="test">测试</button>
+		
+		<script src="../js/require.js" data-main="login"></script>
+	</body>
+</html>

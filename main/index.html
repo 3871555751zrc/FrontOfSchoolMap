@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	    <link rel="stylesheet" type="text/css" href="../css/mui.css"/>
+	    <link rel="stylesheet" type="text/css" href="main.css"/>
+	    <link rel="stylesheet" href="InfoWindow.css" />
+	    <link rel="stylesheet" type="text/css" href="../common/iconfont.css"/>
+		<style>
+			html,
+			body {
+				min-height: 100%;
+				background-color: #efeff4;
+			}
+			
+			
+			
+			
+			#panel {
+            position: fixed;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 10px;
+            right: 10px;
+            width: 180px;
+        }
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="icon-menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-left"></a>
+			<a class="mui-action-back mui-btn mui-btn-link mui-pull-right">关闭</a>
+			
+		</header>
+		<div class="mui-content">
+			
+		<div id="panel"></div>
+			<div class="mui-content-padded" >
+				
+				<div class="mui-scroll-wrapper">
+				    <div class="mui-scroll">
+				        <!--这里放置真实显示的DOM内容-->
+				        <div class="mui-slider">
+				          
+				          <di id="map_box">
+				          	
+				          	<div id="map">
+				          	
+				            </div>
+				          	
+				          </di>
+				          
+				          
+				        </div>
+				    </div>
+				</div>
+				
+				<div id="info"></div>
+			</div>
+			
+		</div>
+		<form>
+					<div id="MarInfDialog" style="display:none;">
+				    </div>
+		</form>
+		
+		<div id="test1" style="z-index: 99999;position:fixed;top: 50px;"><button id="start">开始</button><button id="spatialQuery">空间查询</button></div>
+		
+		
+		
+		
+		<div id="curr_position">
+			<span class="iconfont icon-curr_position font_full" style="font-size: 50px;text-align:50px;position: absolute;top:14px;"></span>
+		</div>
+		<div id="map_mark_box">
+		   <span class="mui-icon icon-map_mark-copy iconfont" style="font-size: 50px;color: yellow;"></span>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <div id="tableNav">
+		 <a class="mui-tab-item mui-active">
+			<span class="mui-icon mui-icon-home iconfont icon-dituliulan" id="dituliulan"></span>
+			<span class="mui-tab-label">地图浏览</span>
+		</a>
+		<a class="mui-tab-item" id="zhoubianchaxun">
+			<span class="mui-icon mui-icon-phone iconfont icon-16002"></span>
+			<span class="mui-tab-label">周边查询</span>
+		</a>
+		
+		<a class="mui-tab-item" id="mine">
+			<span class="mui-icon mui-icon-gear iconfont icon-wode"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+		    </div>
+		  
+		</nav>
+		<div id="menu-wrapper" class="menu-wrapper hidden">
+			<div id="menu" class="menu">
+				<ul class="mui-table-view mui-table-view-inverted">
+					<li class="mui-table-view-cell">
+						<a href="javascript:;" id="hello">加载我曾经发布的消息</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="javascript:;" id="spatialQuery">空间查询</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="javascript:;">Item 3</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="javascript:;">Item 4</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="javascript:;">Item 5</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="javascript:;">Item0 6</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="javascript:;"><img src="" id="img1"/></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="menu-backdrop" class="menu-backdrop"></div>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=d8f9934e867322676d97a422bf33c111&plugin=AMap.PolyEditor,AMap.CircleEditor,AMap.Driving"></script>
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+		<script src="../js/require.js" data-main="main"></script>
+		
+		<!--<script>
+			document.getElementById("test1").addEventListener("click",function(){
+				var request = {
+					type:"test",
+					data:{
+						name:"郑如聪",//
+						age:21
+					}
+				}
+				$.ajax({
+			url: "http://176547or77.51mypc.cn/SchoolMapBackEnd/TestServlet" + "?type=" + request.type,
+			method: "post",
+			data: {
+				request: JSON.stringify(request.data)
+			},
+			success: function(data) {
+				console.log(data);
+				var json = JSON.parse(data);
+				console.log(json);
+			},
+			error: function() {
+                   console.log("dfd");
+			}
+		});
+			});
+		</script>-->
+		
+	     
+	   
+	    
+		
+	</body>
+
+</html>
