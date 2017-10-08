@@ -5,6 +5,21 @@
 		<title>周边查询</title>
 		<link rel="stylesheet" href="../css/mui.css" />
 		<link rel="stylesheet" href="zhoubianchaxun.css" />
+		<style type="text/css">
+				
+			#panel {
+            position: fixed;
+            background-color: white;
+            max-height: 30%;
+            overflow-y: auto;
+            bottom: 10px;
+            right: 0px;
+            width: 100%;
+            z-index: 9999;
+            border: 1px solid blue;
+            border-radius: 10px;
+        }
+		</style>
 	</head>
 	<body>
 		<header class="mui-bar mui-bar-nav">
@@ -12,8 +27,20 @@
 		    <h1 class="mui-title">周边查询</h1>
 		</header>
 		<div class="mui-content">
-		    这个是周边查询的东西 
+			<div id="queryBox">
+				<button id="tiandiancafei">甜点咖啡</button>
+				<button id="hanshiliaolijixican">韩式料理及西餐</button>
+				<button id="xiangcai">湘菜</button>
+				<button id="xiaochikuaican">小吃快餐</button>
+				<button id="huoguo">火锅</button>
+				<button id="shaokao">烧烤</button>
+				<button id="haixian">海鲜</button>
+				
+			</div>
+			<div id="panel"></div>
+		    <div id="map"></div>
 		</div>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=d8f9934e867322676d97a422bf33c111&plugin=AMap.PolyEditor,AMap.CircleEditor,AMap.Driving"></script>
 		<script type="text/javascript" src="../js/require.js" data-main="zhoubianchaxun"></script>
 	</body>
 </html>

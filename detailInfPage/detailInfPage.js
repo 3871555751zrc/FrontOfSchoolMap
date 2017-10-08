@@ -59,8 +59,21 @@ require.config({
 			};
 			
 			
-			DetailInfPage.prototype.setLikeCount = function(){
+			DetailInfPage.prototype.setLikeCount = function(callback){
 				var me = this;
+				var infId = document.getElementById("infId").innerHTML;
+			 		   var request = {
+			 				type:"USER_LOADMARKINFLIKECOUNT",
+			 				data:{
+			 					infId:infId
+			 				}
+			 			};
+			 			
+			 			me.opts.connect(request,function(json){
+			 		      callback(json.markinfcount);//渲染
+			 			},function(json){
+			 				mui.toast(json.message);
+			 			});
 				
 			}
 			
@@ -70,7 +83,10 @@ require.config({
 				var me = this;
 			    me.like();//喜欢的事件
 			    me.comment();//评论的事件
-			    me.loadComment();//加载评论的事件
+			    $("#loadComment").on("click",function(){
+			    	me.loadComment();//加载评论的事件
+			    	
+			    });
 			}
 			
 			DetailInfPage.prototype.like = function(){
@@ -86,6 +102,8 @@ require.config({
 			 			
 			 			me.opts.connect(request,function(json){
 			 				mui.toast("点赞成功");
+			 			var currLikeCount = parseInt(document.getElementById("likeCount").innerText,10);
+			    	    document.getElementById("likeCount").innerText = currLikeCount+1;	
 			 			},function(json){
 			 				mui.toast("点赞失败");
 			 			});
@@ -127,7 +145,7 @@ require.config({
 				var me = this;
 			    
 			    	   var infId = document.getElementById("infId").innerHTML;
-			 			var request = {
+			 		   var request = {
 			 				type:"USER_LOADCOMMENT",
 			 				data:{
 			 					infId:infId
@@ -135,7 +153,24 @@ require.config({
 			 			};
 			 			
 			 			me.opts.connect(request,function(json){
-			 				console.log(JSON.stringify(json));
+			 			var responseDataArr = json.responseDataArr;
+			 			var commentLength = responseDataArr.length;//加载的长度
+			 			
+			 			var html = "";
+			 			
+			 			for(var i=0;i<commentLength;i++){
+			 				html+='<li class="mui-table-view-cell">'+
+					               '<a class="">'+
+					                responseDataArr[i]["username"]+
+					               '</a>'+
+						            '<p>'+
+						              responseDataArr[i]["commenttext"]+
+						            '</p>'+
+					                '</li>';
+			 			}
+			 			$("#commentUlBox").html(html);
+			 		   
+					        
 			 			},function(json){
 			 				mui.toast("评论失败");
 			 			});

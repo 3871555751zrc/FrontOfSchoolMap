@@ -23,7 +23,8 @@
 			"main/imagUpLoad.js",
 			"main/InfoWindow.js",
 			"main/InfoWindow.css",
-			"spatialQuery/spatialQuery.js"
+			"spatialQuery/spatialQuery.js",
+			"main/LoadInfByItem.js"
 		],
 		"refer": [
 			"main/index.html",
@@ -122,7 +123,17 @@
 			"js/jquery-3.2.1.min.js",
 			"js/mui.js",
 			"css/mui.css",
-			"js/require.js"
+			"js/require.js",
+			"zhoubianchaxun/ZBInfoWindow.js",
+			"zhoubianchaxun/LoadZBInf.js",
+			"main/imgs/1.png",
+			"zhoubianchaxun/imges/kafeitiandian.jpg",
+			"zhoubianchaxun/imges/hanshiliaoli.jpg",
+			"zhoubianchaxun/imges/xiangcai.png",
+			"zhoubianchaxun/imges/xiaochikuaican.png",
+			"zhoubianchaxun/imges/huoguo.png",
+			"zhoubianchaxun/imges/shaokao.png",
+			"zhoubianchaxun/imges/haixian.png"
 		]
 	}
 }

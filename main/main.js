@@ -7,12 +7,14 @@ require.config({
 		"connect":"../js/connect",
 		"LoadMyPublishInf":"LoadMyPublishInf",
 		"spatialQuery":"../spatialQuery/spatialQuery",
-		"jquery":"../js/jquery-3.2.1.min"
+		"jquery":"../js/jquery-3.2.1.min",
+		"LoadInfByItem":"LoadInfByItem"
 	}
 	
 });
 
-require(["mui","MarkInf","InfoWindow","connect","LoadMyPublishInf","spatialQuery","jquery"],function(mui,MarkInf,InfoWindow,connect,LoadMyPublishInf,spatialQuery,jquery){
+require(["mui","MarkInf","InfoWindow","connect","LoadMyPublishInf","spatialQuery","jquery","LoadInfByItem"]
+,function(mui,MarkInf,InfoWindow,connect,LoadMyPublishInf,spatialQuery,jquery,LoadInfByItem){
 	var mui = mui.mui;
 	var MarkInf = MarkInf.MarkInf;
 	var connect = connect.connect;
@@ -20,6 +22,7 @@ require(["mui","MarkInf","InfoWindow","connect","LoadMyPublishInf","spatialQuery
 	var LoadMyPublishInf = LoadMyPublishInf.LoadMyPublishInf;
 	var Editor = spatialQuery.Editor;
 	var $ = jquery;
+	var LoadInfByItem = LoadInfByItem.LoadInfByItem;
 	
 	var map = null;//地图全局对象牛逼
 	mui.init({
@@ -38,11 +41,13 @@ require(["mui","MarkInf","InfoWindow","connect","LoadMyPublishInf","spatialQuery
 			mui('#menu').on('tap', 'a', function() {
 				toggleMenu();
 				if(this.id==="hello"){
+					map.clearMap();
 					var loadMyPublishInf = new LoadMyPublishInf({
 						map:map
 					});
 				}
 				else if(this.id==="spatialQuery"){//
+					map.clearMap();
 					var editorCircle = new Editor({
 						map:map,
 						center:[112.927165,28.175154],
@@ -51,6 +56,31 @@ require(["mui","MarkInf","InfoWindow","connect","LoadMyPublishInf","spatialQuery
 						spatialQuery:document.getElementById("spatialQuery"),
 						InfoWindow:InfoWindow
 					});
+				}
+				else if(this.id==="amusement"){
+					map.clearMap();
+					var amusemet = new LoadInfByItem({
+						map:map,
+						type:"USER_LOADAMUSEMENT"
+					});
+				}
+				else if(this.id==="news"){
+					map.clearMap();
+					var news = new LoadInfByItem({
+						map:map,
+						type:"USER_LOADNEWS"
+                       
+					});
+				}
+				else if(this.id==="schoolNotice"){
+					map.clearMap();
+					var schoolNotice = new LoadInfByItem({
+						map:map,
+						type:"USER_LOADASCHOOLNOTICE"
+					});
+				}
+				else if(this.id==="hotEvent"){
+					alert("hotEvent");
 				}
 			});
 			var busying = false;

@@ -62,7 +62,7 @@ require.config({
 //				});
 				me.opts.spatialQuery.addEventListener("click",function(){
 					me.queryData(function(usedDataArr){
-						console.log(JSON.stringify(usedDataArr));
+						
 			            me.showMark(usedDataArr);
 					});
 				});

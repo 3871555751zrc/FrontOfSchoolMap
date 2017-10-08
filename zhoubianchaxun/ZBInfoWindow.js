@@ -9,7 +9,7 @@ require.config({
 define(["connect","mui","jquery"],function(connect,mui,jquery){
 	var mui = mui.mui;
 	var $ = jquery;
-	var InfoWindow = {
+	var ZBInfoWindow = {
 		count:0,
 		mui:null,
 		map:null,
@@ -42,9 +42,6 @@ define(["connect","mui","jquery"],function(connect,mui,jquery){
             var positionArrId = marker.getExtData().positionArrId;
             var mapNavId = marker.getExtData().mapNavId;
             setTimeout(function(){
-            	document.getElementById(aimId).onclick = function(e){
-            		me.openDetailInfPage(aimId);
-            	};
             	document.getElementById(positionArrId).innerText = marker.getExtData().positionArr;
             	document.getElementById(mapNavId).onclick = function(){
             		var DestinationPositionArr = document.getElementById(positionArrId).innerText.split(",");
@@ -70,10 +67,10 @@ define(["connect","mui","jquery"],function(connect,mui,jquery){
   	  (function(initInforObj){
   	me.title = initInforObj.title+'<span style="font-size:11px;color:#F00;">价格:318</span>',
     me.content = [];
-    me.content.push("<img src="+initInforObj.imgurl+" style='height:50px;width:auto;'>内容:"+initInforObj.contentText);
-    me.content.push("发布时间"+initInforObj.publishtime);
+    me.content.push("<img src='http://image.zhms.cn/2017-05/59c42fe3e53548eea3c8b624a9775a25.jpg?x-oss-process=image/format,jpg/interlace,1/resize,m_fill,h_276,w_276/watermark,image_RGVmYXVsdC9iLnBuZw==,t_35,g_se,x_10,y_10' style='height:50px;width:auto;'>");
+    me.content.push("<span>评分:"+initInforObj.scoreofwaiter+"</span>");
+    me.content.push("<span>人均消费:"+initInforObj.pertakes+"</span>");
     var infId = initInforObj.detailInfUrl;
-    me.content.push("<span id="+infId+">详细信息</span>");
     var positionArrId = infId+"_postion";
     var mapNavId = infId+"_mapNavId";
     me.content.push("<span id="+positionArrId+">你妹的</span>");
@@ -160,9 +157,9 @@ define(["connect","mui","jquery"],function(connect,mui,jquery){
 	});	
   }
 	};
-	InfoWindow.setMui(mui);
+	ZBInfoWindow.setMui(mui);
 	
 	return {
-		InfoWindow:InfoWindow
+		ZBInfoWindow:ZBInfoWindow
 	}
 });
